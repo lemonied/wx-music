@@ -1,0 +1,20 @@
+
+export const SET_CURRENT_SONG = 'SET_CURRENT_SONG'
+
+export const SET_CURRENT_LINE_NUM = 'SET_CURRENT_LINE_NUM'
+
+export const SET_CURRENT_TIME = 'SET_CURRENT_TIME'
+
+export const SET_LYRIC_LINES = 'SET_LYRIC_LINES'
+
+export const SET_MODE = 'SET_MODE'
+
+export const SET_PLAY_LIST = 'SET_PLAY_LIST'
+
+export const SET_COLLECTIONS = 'SET_COLLECTIONS'
+
+export const SET_PLAYING = 'SET_PLAYING'
+
+export const SET_SEARCH_HISTORY = 'SET_SEARCH_HISTORY'
+
+export const SET_RECENT = 'SET_RECENT'

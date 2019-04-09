@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/search/main",
+    "pages/music-list/main",
+    "pages/player/main",
+    "pages/singer-songs/main",
+    "pages/add-song/main",
+    "pages/personal/main",
+    "pages/about/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#222222",
+    "navigationBarTitleText": "扣扣音乐",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#222222"
+  },
+  "requiredBackgroundModes": ["audio"],
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#333333",
+    "selectedColor": "#ffcd32",
+    "borderStyle": "black",
+    "list": [{
+      "text": "推荐",
+      "pagePath": "pages/index/main",
+      "iconPath": "static/tabs/home.png",
+      "selectedIconPath": "static/tabs/home-active.png"
+    }, {
+      "text": "搜索",
+      "pagePath": "pages/search/main",
+      "iconPath": "static/tabs/search.png",
+      "selectedIconPath": "static/tabs/search-active.png"
+    }, {
+      "text": "我的",
+      "pagePath": "pages/personal/main",
+      "iconPath": "static/tabs/personal.png",
+      "selectedIconPath": "static/tabs/personal-active.png"
+    }, {
+      "text": "关于",
+      "pagePath": "pages/about/main",
+      "iconPath": "static/tabs/about.png",
+      "selectedIconPath": "static/tabs/about-active.png"
+    }],
+    "position": "bottom"
+  }
+}
