@@ -4,7 +4,7 @@
     <p class="text">该小程序所用API接口及音频全部来自QQ音乐网页版，仅用作学习交流</p>
     <p class="text">如有问题请联系我：</p>
     <p class="text">QQ：447334358</p>
-    <p class="text">github：https://github.com/timoodada</p>
+    <p class="text">github：https://github.com/timoodada/wx-music</p>
   </div>
 </template>
 
