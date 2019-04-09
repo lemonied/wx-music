@@ -125,6 +125,19 @@
       selectHandler(item) {
         this.addSearchHistory(this.keywords)
         this.addSong(item)
+      },
+      getHeight() {
+        const query = mpvue.createSelectorQuery()
+        query.select('#addSong').boundingClientRect(res => {
+          if (res) {
+            this.paddingTop = res.height
+          }
+        }).exec()
+        query.select('#switches').boundingClientRect(res => {
+          if (res) {
+            this.switchesHeight = res.height
+          }
+        }).exec()
       }
     },
     onReachBottom() {
@@ -133,20 +146,16 @@
       this.page++
       this.doSearch()
     },
+    created() {
+      this.$watch('tab', () => {
+        setTimeout(() => {
+          this.getHeight()
+        }, 100)
+      })
+    },
     onReady() {
       setTimeout(() => {
-        const query = mpvue.createSelectorQuery()
-        query.select('#addSong').boundingClientRect(res => {
-          if (res) {
-            this.paddingTop = res.height
-          }
-        }).exec()
-        query.select('#switches').boundingClientRect(res => {
-          console.log(res)
-          if (res) {
-            this.switchesHeight = res.height
-          }
-        }).exec()
+        this.getHeight()
       }, 200)
     }
   }

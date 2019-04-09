@@ -77,6 +77,7 @@
         const playList = this.list.filter(item => !item.vip)
         this.setPlayList(playList)
         this.setCurrentSong(val)
+        console.log(123)
       },
       delHandler(item) {
         this.$emit('del', item)

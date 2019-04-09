@@ -18,12 +18,14 @@
         del
         @del="toggleCollect"
         v-if="tab === 0"
+        key="collections"
       ></songs-list>
       <songs-list
         v-else
         :list="recent"
         del
         @del="delRecent"
+        key="recent"
       ></songs-list>
     </div>
   </div>
@@ -114,10 +116,8 @@
             break
           default:
         }
-      }
-    },
-    onReady() {
-      setTimeout(() => {
+      },
+      getHeight() {
         const query = mpvue.createSelectorQuery()
         query.select('#userHeader').boundingClientRect(res => {
           if (res) {
@@ -129,6 +129,18 @@
             this.playBtnHeight = res.height
           }
         }).exec()
+      }
+    },
+    created() {
+      this.$watch('tab', () => {
+        setTimeout(() => {
+          this.getHeight()
+        }, 20)
+      })
+    },
+    onReady() {
+      setTimeout(() => {
+        this.getHeight()
       }, 200)
     }
   }
